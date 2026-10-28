@@ -25,26 +25,20 @@ sederhana.
 ```java
 import java.util.Scanner;
 
-public class SiakadFor19 {
+public class Star19{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan nilai n = ");
+        int n = sc.nextInt();
 
-        double nilai, tertinggi = 0, terendah = 100;
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("Masukkan nilai mahasiswa ke- " + i + ": ");
-            nilai = sc.nextDouble();
-            if (nilai > tertinggi) {
-                tertinggi = nilai;
-            }
-            if (nilai < terendah) {
-                terendah = nilai;
-            }   
+        for (int i = 0; i <= n; i++) {
+            System.out.print("*");
+            
         }
-        System.out.println("Nilai tertinggi : " + tertinggi);
-        System.out.println("Nilai terendah : " + terendah);
+        System.out.println();
+        sc.close();
     }
 }
-
 ```
 
 #### 2.1.2 Hasil Running / Screenshot Output
@@ -77,42 +71,22 @@ program dengan menekan Ctrl + C pada terminal.
 ```java
 import java.util.Scanner;
 
-public class SiakadWhile19 {
+public class Rectangle19 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan jumlah baris = ");
+        int baris = sc.nextInt();
+        System.out.print("Masukkan jumlah kolom = ");
+        int kolom = sc.nextInt();
 
-        int nilai, jml, i = 0;
-        System.out.println("Masukkan jumlah mahasiswa: ");
-        jml = sc.nextInt();
-
-        while (i < jml){
-            System.out.print("Masukkan nilai mahasiswa ke- " + (i + 1) + ": ");
-            nilai = sc.nextInt();
-
-            if (nilai < 0 || nilai > 100){
-                System.out.println("Nilai tidak valid, Masukkan lagi nilai yang valid!");
-                continue;
+        for (int i = 1; i <= baris; i++) {
+            for (int j = 1; j <= kolom; j++) {
+                System.out.print("*");
             }
-
-            if (nilai > 80 && nilai <= 100) {
-                System.out.println("Nilai mahasiswa ke-" + (i+1) + " adalah A");
-            } else if (nilai > 73 && nilai <= 80) {
-                System.out.println("Nilai mahasiswa ke-" + (i+1) + " adalah B+");
-            } else if (nilai > 65 && nilai <= 73) {
-                System.out.println("Nilai mahasiswa ke-" + (i+1) + " adalah B");
-            } else if (nilai > 60 && nilai <= 65) {
-                System.out.println("Nilai mahasiswa ke-" + (i+1) + " adalah C+");
-            } else if (nilai > 50 && nilai <= 60) {
-                System.out.println("Nilai mahasiswa ke-" + (i+1) + " adalah C");
-            } else if (nilai > 39 && nilai <= 50) {
-                System.out.println("Nilai mahasiswa ke-" + (i+1) + " adalah D");
-            } else {
-                System.out.println("Nilai mahasiswa ke-" + (i+1) + " adalah E");
-            }
-            i++;
+            System.out.println();
         }
+        sc.close();
     }
-        
 }
 
 ```
@@ -139,32 +113,21 @@ public class SiakadWhile19 {
  ```java
 import java.util.Scanner;
 
-public class KafeDoWhile19 {
+public class Triangle19 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan nilai n = ");
+        int n = sc.nextInt();
 
-        int kopi, teh, roti;
-        String namaPelanggan;
-        int hargaKopi = 12000, hargaTeh = 7000, hargaRoti = 20000;
-
-        do {
-            System.out.print("Masukkan nama pelanggan (ketik 'batal' untuk keluar): ");
-            namaPelanggan = sc.nextLine();
-            if (namaPelanggan.equalsIgnoreCase("batal")) {
-                System.out.println("Transaksi dibatalkan");
-                break;
+        int i = 0;
+        while (i < n){
+            int j = 0;
+            while (j <= i){
+                System.out.print("*");
+                j++;
             }
-            System.out.print("Jumlah kopi: ");
-            kopi = sc.nextInt();
-            System.out.print("Jumlah teh: ");
-            teh = sc.nextInt();
-            System.out.print("Jumlah roti: ");
-            roti = sc.nextInt();
-            int totalHarga = (kopi * hargaKopi) + (teh * hargaTeh) + (roti * hargaRoti);
-            System.out.println("Total yang harus dibayar: Rp " + totalHarga);
-            sc.nextLine();
-        } while (true);
-        System.out.println("Semua transaksi selesai.");
+            i++;
+        }
         sc.close();
     }
 }
