@@ -9,16 +9,17 @@
 
 ## 1: TUJUAN PRAKTIKUM
 
-1. Mahasiswa dapat menjelaskan format penulisan program perulangan (for, while,
-dan do-while)
-2. Mahasiswa dapat mengimplementasikan flowchart perulangan menggunakan
-bahasa pemrograman Java
+1. Memahami konsep perulangan bersarang pada algoritma 
+2. Memahami alur perulangan bersarang
+3. Mengenal sintaks perulangan bersarang
+4. Mampu menerapkan perulangan bersarang untuk menyelesaikan studi kasus
+sederhana.
 
 ---
 
 ## 2: Praktikum
 
-### 2.1 Percobaan 1: Studi Kasus Nilai Mahasiswa di SIAKAD – Perulangan FOR
+### 2.1 Percobaan 1: Review Perulangan 1
 
 #### 2.1.1 Kode Program Java
 ```java
@@ -51,28 +52,26 @@ public class SiakadFor19 {
 ![Output Percobaan 1](<output ujian skripsi.png>)
 
 #### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
-* **Pertanyaan 1:** Sebutkan dan tunjukkan masing-masing komponen perulangan FOR pada kode program Percobaan 1!
+* **Pertanyaan 1:** Jika inisialisasi i = 1 diubah menjadi i = 0 tanpa mengubah kondisi, berapa karakter * yang tercetak ketika n = 5? Jelaskan.
   * **Jawab:** .
-* **Pertanyaan 2:** Mengapa variabel tertinggi diinisialisasi 0 dan terendah diinisialisasi 100? Apa yang terjadi jika variabel tertinggi diinisialisasi 100 dan terendah diinisialisasi 0?
+* **Pertanyaan 2:** Jika kondisi i <= n diganti menjadi i < n, berapa kali perulangan dijalankan saat n = 5? Mengapa hasilnya berbeda?
   * **Jawab:** .
-* **Pertanyaan 3:** Jelaskan fungsi dan alur kerja dari potongan kode berikut!
+* **Pertanyaan 3:** Prediksi output potongan kode berikut ketika n = 9, kemudian buktikan dengan mengganti perulangan FOR pada program Anda dan menjalankannya.
 ```
-if (nilai > tertinggi) {
-    tertinggi = nilai;
-}
-if (nilai < terendah) {
-    terendah = nilai;
+for (int i = 2; i <= n; i += 2) {
+    System.out.print(i+ " ");
 }
 ```
+Modifikasi kode tersebut agar mencetak bilangan ganjil positif yang tidak melebihi n.
   * **Jawab:**
-* **Pertanyaan 4:** Modifikasi kode program sehingga terdapat perhitungan untuk menentukan berapa mahasiswa yang lulus dan yang tidak lulus berdasarkan batas kelulusan (nilai minimal 60). Tampilkan jumlah mahasiswa lulus dan tidak lulus setelah menampilkan nilai tertinggi dan terendah!
+* **Pertanyaan 4:** Jelaskan mengapa perubahan increment i++ menjadi i-- (dengan kondisi tetap i <= n) membuat perulangan berjalan terus-menerus dan tidak berhenti dalam waktu wajar untuk n positif. Jangan menjalankan versi tersebut; jika terlanjur berjalan, hentikan
+program dengan menekan Ctrl + C pada terminal.
   * **Jawab:**
-* **Pertanyaan 5:** Commit dan push kode program ke Github
-  * **Jawab**
     
 ---
 
-### 2.2 Percobaan 2: Studi Kasus Nilai Mahasiswa di SIAKAD – Perulangan WHILE
+### 2.2 Percobaan 2: Pola Bintang Persegi Panjang (Nested FOR)
+
 
 #### 2.2.1 Kode Program
 ```java
@@ -123,27 +122,19 @@ public class SiakadWhile19 {
 ![Output Percobaan 2](<output akses WIFI.png>)
 
 #### 2.2.3 Jawaban Pertanyaan / Pertanyaan Refleksi
-* **Pertanyaan 1:** Pada potongan kode berikut, tentukan maksud dan kegunaan dari sintaks berikut:
-```
-if (nilai < 0 || nilai > 100) {
-    System.out.println("Nilai tidak valid. Masukkan lagi nilai yang valid!");
-    continue;
-}
-```
-a. nilai < 0 || nilai > 100
-b. continue
+* **Pertanyaan 1:** Tentukan fungsi variabel i dan j pada program tersebut.
   * **Jawab:** 
-* **Pertanyaan 2:** Mengapa sintaks i++ dituliskan di akhir perulangan WHILE? Apa yang terjadi jika posisinya dituliskan di awal perulangan WHILE?
+* **Pertanyaan 2:** Berapa kali outer loop, inner loop, dan perintah print("*") dijalankan untuk baris = 4 dan kolom = 7?
   * **Jawab:**
-* **Pertanyaan 3:** Apabila jumlah mahasiswa yang dimasukkan adalah 19, berapa kali perulangan WHILE akan berjalan?
+* **Pertanyaan 3:** Apa yang terjadi jika batas perulangan luar dan dalam ditukar (outer menggunakan kolom, inner menggunakan baris)? Gunakan baris = 3 dan kolom = 6 untuk menjelaskan.
   * **Jawab:**
-* **Pertanyaan 4:** Modifikasi kode program sehingga apabila terdapat mahasiswa yang mendapat nilai A, program menampilkan pesan tambahan "Bagus, pertahankan nilainya"!
+* **Pertanyaan 4:** Jelaskan akibat penghapusan System.out.println(); setelah inner loop.
   * **Jawab:** 
-* **Pertanyaan 5:** Commit dan push kode program ke Github
+* **Pertanyaan 5:**  Modifikasi program agar karakter yang dicetak adalah #, lalu commit dan push perubahan ke GitHub
   * **Jawab:** 
 ---
 
-### 2.3 Percobaan 3: Studi Kasus Transaksi di Kafe – Perulangan DO-WHILE
+### 2.3 Percobaan 3: Debugging Bintang Segitiga – Nested WHILE
 #### 2.3.1 Kode Program Java
  ```java
 import java.util.Scanner;
@@ -184,13 +175,11 @@ public class KafeDoWhile19 {
 ![Output Percobaan 3](<output akses lab.png>)
 
 #### 2.3.3 Jawaban Pertanyaan / Pertanyaan Refleksi
-* **Pertanyaan 1:** Pada penggunaan DO-WHILE ini, apabila nama pelanggan yang dimasukkan pertama kali adalah “batal”, maka berapa kali perulangan dilakukan?
+* **Pertanyaan 1:** Sebutkan ketidaksesuaian output awal dan minimal dua perbaikan yang diperlukan untuk menghasilkan pola segitiga bertingkat.
   * **Jawab:** 
-* **Pertanyaan 2:**  Sebutkan kondisi berhenti yang digunakan pada perulangan DO-WHILE tersebut!
+* **Pertanyaan 2:** Jelaskan peran variabel i dan j. Mengapa nilai j harus diinisialisasi kembali ke 0 pada setiap iterasi outer loop? Apa yang terjadi jika j tidak di-reset?
   * **Jawab:** 
-* **Pertanyaan 3:** Apa fungsi dari penggunaan nilai true pada kondisi DO-WHILE?
-  * **Jawab:** 
-* **Pertanyaan 4:** Mengapa perulangan DO-WHILE tersebut tetap berjalan meskipun tidak ada komponen inisialisasi dan update?
+* **Pertanyaan 3:** Jelaskan perubahan inisialisasi, kondisi, dan perubahan nilai (update) pada outer loop yang diperlukan untuk membentuk segitiga terbalik.
   * **Jawab:** 
 
 
