@@ -12,7 +12,7 @@ public class NilaiKelompok19 {
         if (jumlahKelompok <= 0 || jumlahPenilai <= 0) {
             System.out.println("Jumlah kelompok dan penilai harus > 0.");
         } else {
-            int nomorKelompok = 1;        //penghitung outer loop
+            int nomorKelompok = 1;        // penghitung outer loop
             double rataTertinggi = -1;    // - 1 agar kelompok pertama pasti tercatat
             int kelompokTerbaik = 0;
 
@@ -35,7 +35,8 @@ public class NilaiKelompok19 {
                 System.out.println("Kelompok " + nomorKelompok + ": nilai rata rata = " + rataNilai);
 
                 if (rataNilai > rataTertinggi) {
-                    //  lengkapi: perbarui rataTertinggi dan kelompokTerbaik
+                    rataTertinggi = rataNilai;
+                    kelompokTerbaik = nomorKelompok;
                 }
                 nomorKelompok++;
             }
