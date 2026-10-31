@@ -208,7 +208,7 @@ public class NilaiKelompok19 {
 
 ![Output Percobaan 4](<Output Nilai Kelompok.png>)
 
-#### 2.3.3 Jawaban Pertanyaan / Pertanyaan Refleksi
+#### 2.4.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Mengapa totalNilai perlu di-reset di dalam outer loop, tetapi rataTertinggi tidak boleh di-reset pada setiap kelompok?
   * **Jawab:** 
 * **Pertanyaan 2:** Untuk 3 kelompok dan 2 penilai (tanpa input yang salah), berapa kali badan perulangan FOR dijalankan secara keseluruhan?
