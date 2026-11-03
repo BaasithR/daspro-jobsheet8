@@ -107,7 +107,8 @@ public class Rectangle19 {
 * **Pertanyaan 4:** Jelaskan akibat penghapusan System.out.println(); setelah inner loop.
   * **Jawab:** Semua bintang akan berderet menyamping menjadi satu baris panjang tanpa turun ke bawah.
 * **Pertanyaan 5:**  Modifikasi program agar karakter yang dicetak adalah #, lalu commit dan push perubahan ke GitHub
-  * **Jawab:** 
+  * **Jawab:**
+![Output Modif Percobaan](<Output Rectangle ###.png>)
 ---
 
 ### 2.3 Percobaan 3: Debugging Bintang Segitiga – Nested WHILE
