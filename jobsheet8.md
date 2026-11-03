@@ -48,10 +48,9 @@ public class Star19{
 #### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Jika inisialisasi i = 1 diubah menjadi i = 0 tanpa mengubah kondisi, berapa karakter * yang tercetak ketika n = 5? Jelaskan.
 ![Output Percobaan](<Output Modif Star.png>)
-  * **Jawab:** .
-
+  * **Jawab:** jika i = 0: Tercetak 6 karakter. Karena perulangan dihitung dari 0 sampai 5 (0, 1, 2, 3, 4, 5), yang totalnya ada 6 kali.
 * **Pertanyaan 2:** Jika kondisi i <= n diganti menjadi i < n, berapa kali perulangan dijalankan saat n = 5? Mengapa hasilnya berbeda?
-  * **Jawab:** .
+  * **Jawab:** Perulangan hanya berjalan 5 kali. Angka 5 tidak ikut dihitung sehingga jumlah bintang berkurang satu.
 * **Pertanyaan 3:** Prediksi output potongan kode berikut ketika n = 9, kemudian buktikan dengan mengganti perulangan FOR pada program Anda dan menjalankannya.
 ```
 for (int i = 2; i <= n; i += 2) {
@@ -59,10 +58,11 @@ for (int i = 2; i <= n; i += 2) {
 }
 ```
 Modifikasi kode tersebut agar mencetak bilangan ganjil positif yang tidak melebihi n.
-  * **Jawab:**
+   * **Jawab:** Mengubah titik awal i = 1 dan menggunakan kelipatan i+=2.
+
 * **Pertanyaan 4:** Jelaskan mengapa perubahan increment i++ menjadi i-- (dengan kondisi tetap i <= n) membuat perulangan berjalan terus-menerus dan tidak berhenti dalam waktu wajar untuk n positif. Jangan menjalankan versi tersebut; jika terlanjur berjalan, hentikan
 program dengan menekan Ctrl + C pada terminal.
-  * **Jawab:**
+  * **Jawab:**  Karena nilai i justru semakin kecil (menjauhi n), sehingga syarat i <= n akan selamanya benar (infinite loop).
     
 ---
 
@@ -99,13 +99,13 @@ public class Rectangle19 {
 
 #### 2.2.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Tentukan fungsi variabel i dan j pada program tersebut.
-  * **Jawab:** 
+  * **Jawab:** Variabel i mengatur jumlah baris (ke bawah), sedangkan variabel j mengatur jumlah kolom bintang (ke samping).
 * **Pertanyaan 2:** Berapa kali outer loop, inner loop, dan perintah print("*") dijalankan untuk baris = 4 dan kolom = 7?
-  * **Jawab:**
+  * **Jawab:** Outer loop jalan 4 kali, inner loop jalan 4 x 7 = 28 kali, dan perintah cetak * juga dijalankan 28 kali.
 * **Pertanyaan 3:** Apa yang terjadi jika batas perulangan luar dan dalam ditukar (outer menggunakan kolom, inner menggunakan baris)? Gunakan baris = 3 dan kolom = 6 untuk menjelaskan.
-  * **Jawab:**
+  * **Jawab:** Bentuk pola bintang akan berputar, posisi baris dan kolomnya tertukar.
 * **Pertanyaan 4:** Jelaskan akibat penghapusan System.out.println(); setelah inner loop.
-  * **Jawab:** 
+  * **Jawab:** Semua bintang akan berderet menyamping menjadi satu baris panjang tanpa turun ke bawah.
 * **Pertanyaan 5:**  Modifikasi program agar karakter yang dicetak adalah #, lalu commit dan push perubahan ke GitHub
   * **Jawab:** 
 ---
@@ -145,11 +145,11 @@ public class Triangle19 {
 
 #### 2.3.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Sebutkan ketidaksesuaian output awal dan minimal dua perbaikan yang diperlukan untuk menghasilkan pola segitiga bertingkat.
-  * **Jawab:** 
+  * **Jawab:** Awalnya bintang berderet lurus ke samping dan jumlah barisnya salah. Perbaikannya adalah menambah perintah pindah baris (println) serta memperbaiki batasan angka perulangan luarnya.
 * **Pertanyaan 2:** Jelaskan peran variabel i dan j. Mengapa nilai j harus diinisialisasi kembali ke 0 pada setiap iterasi outer loop? Apa yang terjadi jika j tidak di-reset?
-  * **Jawab:** 
+  * **Jawab:** Variabel i untuk baris, variabel j untuk kolom. Nilai j harus di-reset ke 0 di setiap baris baru agar hitungan bintang selalu dimulai dari awal lagi. 
 * **Pertanyaan 3:** Jelaskan perubahan inisialisasi, kondisi, dan perubahan nilai (update) pada outer loop yang diperlukan untuk membentuk segitiga terbalik.
-  * **Jawab:** 
+  * **Jawab:** Titik awal i dimulai dari angka terbesar (n), kondisinya menggunakan >= 1, dan perubahannya dikurangi (i--). 
 
 ### 2.4 Percobaan 4: Studi Kasus Nilai Tugas Proyek Kelompok
 #### 2.4.1 Kode Program Java
@@ -211,15 +211,15 @@ public class NilaiKelompok19 {
 
 #### 2.4.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Mengapa totalNilai perlu di-reset di dalam outer loop, tetapi rataTertinggi tidak boleh di-reset pada setiap kelompok?
-  * **Jawab:** 
+  * **Jawab:** totalNilai harus di-reset agar nilai antar kelompok tidak tercampur. Sementara rataTertinggi dibiarkan agar nilai paling tinggi dari kelompok sebelumnya tetap tersimpan.
 * **Pertanyaan 2:** Untuk 3 kelompok dan 2 penilai (tanpa input yang salah), berapa kali badan perulangan FOR dijalankan secara keseluruhan?
-  * **Jawab:** 
+  * **Jawab:** Dijalankan sebanyak 6 kali (3 x 2).
 * **Pertanyaan 3:** Apa yang terjadi jika totalNilai dideklarasikan sebagai int dan rata-rata dihitung menggunakan pembagian dua bilangan bulat? Berikan contoh nilai.
-  * **Jawab:**
+  * **Jawab:** Angka di belakang koma (desimal) pada hasil rata-rata akan hilang atau terbuang (contoh: 85.5 menjadi 85 saja).
 * **Pertanyaan 4:** Mengapa rataTertinggi diberi nilai awal -1, bukan 0? Berikan contoh input yang membuat hasil salah apabila nilai awalnya 0.
-  * **Jawab:**
+  * **Jawab:** Agar jika ada kelompok yang mendapat nilai 0 atau di atas 0, nilai tersebut bisa langsung mengalahkan -1. Jika di-set 0, kelompok dengan nilai di bawahnya tidak akan terbaca dengan benar.
 * **Pertanyaan 5:**  Program ini memiliki tiga tingkat perulangan. Sebutkan masing-masing jenis perulangan beserta perannya.
-  * **Jawab:** 
+  * **Jawab:** Perulangan WHILE luar (mengatur perpindahan kelompok), FOR tengah (mengatur penilai), dan DO-WHILE dalam (memastikan input nilai valid antara 0 sampai 100).
 
 
 
