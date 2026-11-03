@@ -108,7 +108,9 @@ public class Rectangle19 {
   * **Jawab:** Semua bintang akan berderet menyamping menjadi satu baris panjang tanpa turun ke bawah.
 * **Pertanyaan 5:**  Modifikasi program agar karakter yang dicetak adalah #, lalu commit dan push perubahan ke GitHub
   * **Jawab:**
+
 ![Output Modif Percobaan](<Output Rectangle ###.png>)
+
 ---
 
 ### 2.3 Percobaan 3: Debugging Bintang Segitiga – Nested WHILE
