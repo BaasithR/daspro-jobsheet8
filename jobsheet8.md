@@ -109,7 +109,7 @@ public class Rectangle19 {
 * **Pertanyaan 5:**  Modifikasi program agar karakter yang dicetak adalah #, lalu commit dan push perubahan ke GitHub
   * **Jawab:**
 
-![Output Modif Percobaan](<Output Rectangle ###.png>)
+![Output Modif Percobaan](<Output-Rectangle.png>)
 
 ---
 
@@ -232,42 +232,26 @@ public class NilaiKelompok19 {
 ```java
 import java.util.Scanner;
 
-public class tugas1diskonBuku19 {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+public class Tugas1_19 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Masukkan nilai n = ");
+        int n = sc.nextInt();
 
-    int diskon = 0; 
-    String buku;
-    int jumlah;
-
-    System.out.print("Buku apa yg ingin kamu beli?  ");
-    buku = sc.next();
-
-    System.out.print("Berapa jumlah bukunya? ");
-    jumlah = sc.nextInt();
-
-    if (buku.equalsIgnoreCase("kamus")) {
-      diskon = 10;
-      if (jumlah > 2) {
-        diskon += 0.02;
-      }
-    } else if (buku.equalsIgnoreCase("novel")) {
-      diskon = 7;
-      if (jumlah > 3) {
-        diskon += 3;
-      } else {
-        diskon += 0.01;
-      }
-    } else {
-      if (jumlah > 3) {
-        diskon = 5;
-      }
-
+        int totalAngka = 0;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+                totalAngka++;
+            }
+            System.out.println();
+        }
+        System.out.println("Total angka tercetak: " + totalAngka);
+        sc.close();
     }
-    sc.close();
-    System.out.println(String.format("Total diskonmu adalah %d%%",  diskon));
-  }
 }
+
 ```
    * **Hasil Running**
 
