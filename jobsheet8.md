@@ -255,25 +255,103 @@ public class Tugas1_19 {
 ```
    * **Hasil Running**
 
-![Output Tugas 1](<output diskon buku.png>)
+![Output Tugas 1](<Output Tugas 1.png>)
 
    2. Tugas 2: Buat program untuk menampilkan tabel perkalian berukuran n × n menggunakan nested FOR atau WHILE. Nilai n minimal 3. Setiap posisi menampilkan hasil perkalian nomor baris dan nomor kolom. Atur spasi agar keluaran rapi, lalu tampilkan jumlah seluruh angka pada tabel
    * **Kode Program Java**
 ```java
+import java.util.Scanner;
+
+public class Tugas2_19 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Masukkan nilai n = ");
+        int n = sc.nextInt();
+        int totalAngka = 0;
+
+        if (n < 3) {
+            System.out.println("Nilai n minimal harus 3");
+        } else {
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    int hasil = i * j;
+                    System.out.printf("%4d" , hasil);
+                    totalAngka += hasil;
+                }
+                System.out.println();
+            }
+        }
+        System.out.println("Jumlah seluruh angka: " + totalAngka);
+        sc.close();
+    }
+}
 
 
 ```
    * **Hasil Running**
 
-![Output Tugas 2](<output seleksi asisten.png>)
+![Output Tugas 2](<Output Tugas 2.png>)
 
    3. Tugas 3: Sebuah pusat perbelanjaan memiliki beberapa toko. Setiap toko melayani sejumlah pelanggan pada hari yang sama, dan setiap pelanggan membeli beberapa barang. Program meminta jumlah toko, kemudian jumlah pelanggan pada masing-masing toko, dan jumlah
 barang yang dibeli setiap pelanggan. Hitung dan tampilkan total pelanggan serta total barang per toko, total barang seluruh toko, dan nomor toko dengan jumlah barang terbanyak. Jika terdapat nilai tertinggi yang sama, tampilkan toko dengan nomor paling kecil
    * **Kode Program Java**
 ```java
+import java.util.Scanner;
 
+public class Tugas3_19 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah toko: ");
+        int jmlToko = sc.nextInt();
+
+        if (jmlToko < 1) {
+            System.out.println("Jumlah toko minimal harus 1!");
+        } else {
+            int totBarangSeluruhToko = 0;
+            int barangTerbanyak = -1;
+            int tokoTerbanyak = 0;
+
+            for (int i = 1; i <= jmlToko; i++) {
+                int jmlPelanggan;
+                do {
+                    System.out.print("Masukkan jumlah pelanggan " + i + ": ");
+                    jmlPelanggan = sc.nextInt();
+                    if (jmlPelanggan < 0) {
+                        System.out.println("Jumlah pelanggan tidak boleh negatif!");
+                    }
+                } while (jmlPelanggan < 0);
+
+                int totBarangToko = 0;
+                for (int j = 1; j <= jmlPelanggan; j++) {
+                    int jmlBarang;
+                    do {
+                        System.out.print("  Jumlah barang pelanggan " + j + ": ");
+                        jmlBarang = sc.nextInt();
+                        if (jmlBarang < 0) {
+                            System.out.println("  Jumlah barang tidak boleh negatif!");
+                        }
+                    } while (jmlBarang < 0);
+
+                    totBarangToko += jmlBarang;
+                }
+                System.out.println("Toko " + i + " - pelanggan: " + jmlPelanggan + ", total barang: " + totBarangToko);
+                totBarangSeluruhToko += totBarangToko;
+
+                if (totBarangToko > barangTerbanyak) {
+                    barangTerbanyak = totBarangToko;
+                    tokoTerbanyak = i;
+                }
+            }
+            System.out.println("Total barang seluruh toko: " + totBarangSeluruhToko);
+            System.out.println("Toko dengan barang terbanyak: " + tokoTerbanyak);
+        }
+        sc.close();
+    }
+}
 
 ```
    * **Hasil Running**
 
-![Output Tugas 3](<output seleksi asisten.png>)
+![Output Tugas 3](<Output Tugas 3.png>)
